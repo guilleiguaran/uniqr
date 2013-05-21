@@ -19,7 +19,7 @@
         <td><%= location.name %></td>
         <td><%= location.latitude %></td>
         <td><%= location.longitude %></td>
-        <%= content_tag(:td, location.qrhash, id: 'qr' + location.id.to_s, class: 'qr') %>
+        <td><%= image_tag "https://chart.googleapis.com/chart?chs=128x128&cht=qr&chl=" +  location.id.to_s + "=UTF-8" %></td>
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
         <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
