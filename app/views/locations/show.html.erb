@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @location.name %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @location.longitude %>
+</p>
+
+<p>
+  <strong>Qrhash:</strong>
+  <%= @location.qrhash %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location), class: 'btn' %> |
+<%= link_to 'Back', locations_path, class: 'btn' %>
