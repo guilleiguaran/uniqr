@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130520202731) do
+ActiveRecord::Schema.define(version: 20130521092726) do
 
   create_table "locations", force: true do |t|
     t.string   "name"
@@ -21,5 +21,7 @@ ActiveRecord::Schema.define(version: 20130520202731) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "locations", ["qrhash"], name: "index_locations_on_qrhash"
 
 end
